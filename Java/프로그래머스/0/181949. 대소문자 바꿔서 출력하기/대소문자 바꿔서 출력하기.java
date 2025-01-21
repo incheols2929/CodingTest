@@ -5,7 +5,7 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         String a = sc.next();
         StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < a.length(); i++){
+        /*for(int i = 0; i < a.length(); i++){
             char c = a.charAt(i);
             if(Character.isUpperCase(c)){
                 sb.append(Character.toLowerCase(c));
@@ -14,7 +14,10 @@ public class Solution {
             }else{
                 sb.append(c);
             }
-        }
+        }*/
+         for(char c : a.toCharArray()){
+             sb.append(Character.isUpperCase(c) ? Character.toLowerCase(c) : Character.toUpperCase(c));
+         }
          System.out.println(sb.toString());
     }
 }
